@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Мой аккаунт</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+</head>
+<body>
+    <div class = "main">
+    <header>
+    </header>
+    <nav>
+        <ul>
+            <img src="{{ user.avatar_url }}" alt="Avatar">
+            <li><a href="/logout" class="nav-bar__link_exit-link">Выйти</a></li>
+            <li><a href="/my_posts">Посмотреть свои записи</a></li>
+            <form action="/upload_avatar" method="post">
+            <input type="text" name="avatar_url" placeholder="Введите URL фотографии">
+            <input type="submit" value="Добавить аватарку">
+</form>
+        </ul>
+    </nav>
+    <div class = "main">
+        <section>
+            <h2>Ваш аккаунт</h2>
+            <p>Здесь вы можете управлять своим аккаунтом и просматривать свои записи.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Все права защищены.</p>
+    </footer>
+    </div>
+</body>
+</html>

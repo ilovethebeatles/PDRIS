@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Posts</title>
+</head>
+<body>
+  <h1>My Posts</h1>
+  <form action="/add_post" method="post">
+    <textarea name="content" rows="4" cols="50"></textarea><br>
+    <input type="submit" value="Add Post">
+  </form>
+  {% for post in posts %}
+    <div>
+      <h3>{{ post.author }}</h3>
+      <p>{{ post.content }}</p>
+      <p>{{ post.created_at }}</p>
+    </div>
+  {% endfor %}
+</body>
+</html>
+
