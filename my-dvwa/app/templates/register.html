@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log in Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/auth.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Log in Page</h1>
+        <form action="/register" method="post">
+            <label for="username">Login:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+
+
+    </div>
+</body>
+</html>
